@@ -12,7 +12,8 @@
    "dependencies": {
       "body-parser": "^1.18.1",
       "express": "^4.15.4",
-      "reflect-metadata": "^0.1.10",
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.13",
       "typeorm": "0.2.37"
    },
    "scripts": {
