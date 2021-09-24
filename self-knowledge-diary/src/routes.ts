@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 
-import { getDays, saveDays } from './controller/DaysController';
+import { getDays, saveDay } from './controller/DaysController';
 
 const routes = Router();
 
@@ -9,6 +9,6 @@ routes.get('/', (request: Request, response: Response) => {
 });
 
 routes.get('/days', getDays);
-routes.post('/days', saveDays);
+routes.post('/days', saveDay);
 
 export default routes;
