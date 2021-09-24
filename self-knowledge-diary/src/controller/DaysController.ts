@@ -7,6 +7,12 @@ export const getDays = async (request: Request, response: Response) => {
   return response.json(days);
 };
 
+export const getDay = async (request: Request, response: Response) => {
+  const { id } = request.params;
+  const day = await getRepository(Days).findOne(id);
+  return response.json(day);
+}
+
 export const saveDay = async (request: Request, response: Response) => {
   const days = await getRepository(Days).save(request.body);
   response.json(days);
