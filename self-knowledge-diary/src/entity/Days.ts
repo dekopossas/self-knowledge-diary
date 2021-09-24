@@ -1,18 +1,28 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
 
 @Entity()
-export class User {
+export class Days {
 
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    firstName: string;
+    feeling: number;
 
     @Column()
-    lastName: string;
+    because: string;
 
     @Column()
-    age: number;
+    behaviors: string;
+
+    @Column()
+    be_better: string;
+    
+    @CreateDateColumn()
+    created_at: Date;
+    
+    @UpdateDateColumn()
+    updated_at: Date;
+    
 
 }
