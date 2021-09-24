@@ -28,3 +28,13 @@ export const updateDay = async (request: Request, response: Response) => {
 
   return response.status(404).json({ message: 'Day not found' });
 };
+
+export const deleteDay = async (request: Request, response: Response) => {
+  const { id } = request.params;
+  const day = await getRepository(Days).delete(id);
+  if (day) {
+    return response.json({ message: 'Day deleted successfully' });
+  }
+
+  return response.status(404).json({ message: 'Day not found' });
+};
