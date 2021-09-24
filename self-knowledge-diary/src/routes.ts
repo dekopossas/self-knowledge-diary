@@ -11,6 +11,6 @@ routes.get('/', (request: Request, response: Response) => {
 routes.get('/days', getDays);
 routes.get('/days/:id', getDay);
 routes.post('/days', saveDay);
-routes.post('/days:id', updateDay);
+routes.post('/days:/id', updateDay);
 
 export default routes;
