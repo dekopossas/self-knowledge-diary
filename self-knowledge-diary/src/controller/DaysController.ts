@@ -32,7 +32,8 @@ export const updateDay = async (request: Request, response: Response) => {
 export const deleteDay = async (request: Request, response: Response) => {
   const { id } = request.params;
   const day = await getRepository(Days).delete(id);
-  if (day) {
+  if (day.affected === 1) {
+    const dayUpdated = await getRepository(Days).findOne(id);
     return response.json({ message: 'Day deleted successfully' });
   }
 
