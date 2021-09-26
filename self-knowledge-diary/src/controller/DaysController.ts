@@ -32,4 +32,5 @@ export const updateDay = async (request: Request, response: Response) => {
 export const deleteDay = async (request: Request, response: Response) => {
   const { id } = request.params;
   const day = await getRepository(Days).delete(id);
+  
 };
