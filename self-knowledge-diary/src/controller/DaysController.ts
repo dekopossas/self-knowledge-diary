@@ -36,8 +36,8 @@ export const deleteDay = async (request: Request, response: Response) => {
 
   if (day.affected === 1) {
     const dayUpdated = await getRepository(Days).findOne(id);
-    return response.json(dayUpdated);
+    return response.json({ message: 'Day Removed successfully' });
   }
 
-  return response.status(404).json({ message: 'Task Removed!' });
+  return response.status(404).json({ message: 'Task not found!' });
 };
