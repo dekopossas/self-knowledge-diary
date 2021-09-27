@@ -30,14 +30,14 @@ export const updateDay = async (request: Request, response: Response) => {
 };
 
 export const deleteDay = async (request: Request, response: Response) => {
-    const { id } = request.params;
-    const day = await getRepository(Days).delete(id);
-    return response.json(day);
+  const { id } = request.params;
+  const day = await getRepository(Days).delete(id);
+  return response.json(day);
 
-    if (day.affected === 1) {
-      const dayUpdated = await getRepository(Days).findOne(id);
-      return response.json(dayUpdated);
-    }
-  
-    return response.status(404).json({ message: 'Task Removed!' });
-  };
+  if (day.affected === 1) {
+    const dayUpdated = await getRepository(Days).findOne(id);
+    return response.json(dayUpdated);
+  }
+
+  return response.status(404).json({ message: 'Task Removed!' });
+};
