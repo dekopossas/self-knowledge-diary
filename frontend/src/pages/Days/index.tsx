@@ -17,7 +17,6 @@ function Days() {
 
   async function loadDays() {
     const response = await api.get('/days');
-    console.log(response);
     setDays(response.data);
   }
 
@@ -28,7 +27,7 @@ function Days() {
   return (
     <div className="container">
       <br />
-      
+
       <h1>Days Pages</h1>
       <br />
       <Table striped bordered hover>
@@ -39,19 +38,20 @@ function Days() {
             <th>Gatilho: </th>
             <th>Reação: </th>
             <th>Melhorias: </th>
+            <th>Ações: </th>
           </tr>
         </thead>
         <tbody>
-          {
-            days.map(day => {
-              <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+          {days.map((day) => (
+            <tr key={day.id}>
+              <td>{day.created_at}</td>
+              <td>{day.feeling}</td>
+              <td>{day.because}</td>
+              <td>{day.behaviors}</td>
+              <td>{day.be_better}</td>
+              <td><button>edit</button></td>
             </tr>
-            })
-          }
+          ))}
         </tbody>
       </Table>
     </div>
