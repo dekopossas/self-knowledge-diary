@@ -3,12 +3,14 @@ import { Table } from 'react-bootstrap';
 import api from '../../services/api';
 
 function Days() {
-  
+  const [days, setDays] = useState([]);
+
   async function loadDays() {
     const response = await api.get('/days');
     console.log(response);
+    setDays(response.data);
   }
-  
+
   useEffect(() => {
     loadDays();
   }, []);
