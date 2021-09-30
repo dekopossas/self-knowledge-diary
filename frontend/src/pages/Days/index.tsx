@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import api from '../../services/api';
 
 function Days() {
+  
+  async function loadDays() {
+    const response = await api.get('/days');
+    console.log(response);
+  }
+  
+  useEffect(() => {
+    loadDays();
+  }, []);
+
   return (
     <div className="container">
       <br />
