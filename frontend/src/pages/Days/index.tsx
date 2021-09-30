@@ -2,8 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
 import api from '../../services/api';
 
+interface IDay {
+  id: number;
+  feeling: number;
+  because: string;
+  behaviors: string;
+  be_better: string;
+  created_at: Date;
+  updated_at: Date;
+}
+
 function Days() {
-  const [days, setDays] = useState([]);
+  const [days, setDays] = useState<IDay[]>([]);
 
   async function loadDays() {
     const response = await api.get('/days');
@@ -24,7 +34,7 @@ function Days() {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>#</th>
+            <th>Data: </th>
             <th>Sentimento: </th>
             <th>Gatilho: </th>
             <th>Reação: </th>
