@@ -10,9 +10,7 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Item as={Link} className="nav-link" to="/?deko=possas" >Home</Nav.Item>
-            <Nav.Item as={Link} className="nav-link" to="/?deko=possas?samer=kayali" >Home</Nav.Item>
-            <Nav.Item as={Link} className="nav-link" to="/?deko=possas?samer=kayali?luiz=e=ana" >Home</Nav.Item>
+            <Nav.Item as={Link} className="nav-link" to="/" >Home</Nav.Item>
             <Nav.Item as={Link} className="nav-link" to="/calendario" >Diário</Nav.Item>
           </Nav>
         </Navbar.Collapse>
