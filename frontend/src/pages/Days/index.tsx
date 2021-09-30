@@ -23,10 +23,10 @@ function Days() {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Sentimento: </th>
+            <th>Gatilho: </th>
+            <th>Reação: </th>
+            <th>Melhorias: </th>
           </tr>
         </thead>
         <tbody>
