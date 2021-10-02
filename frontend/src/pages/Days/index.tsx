@@ -62,7 +62,7 @@ function Days() {
               <td>{day.created_at}</td>
               <td>
                 <div>
-                  <Badge variant="primary">Primary</Badge>
+                  <Badge variant="primary" color="primary">Primary</Badge>
                 </div>
               </td>
               <td>{day.because}</td>
