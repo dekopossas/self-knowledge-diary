@@ -26,11 +26,23 @@ function Days() {
     setDays(response.data);
   }
 
-  // const setFeeling(number: number) {
-  //   if (number === 1){
-
-  //   }
-  // }
+  const setFeeling = (number: number) => {
+    if (number === 1){
+      return <Button variant="warning">Alegria</Button>
+    }
+    if (number === 2){
+      return <Button variant="danger">Raiva</Button>
+    }
+    if (number === 3){
+      return <Button variant="secondary">Medo</Button>
+    }
+    if (number === 4){
+      return <Button variant="success">Nojo</Button>
+    }
+    if (number === 5){
+      return <Button variant="primary">Tristeza</Button>
+    }
+  }
 
   // ----------------------------------------------------------------
   // Effects
@@ -61,7 +73,9 @@ function Days() {
             <tr key={day.id}>
               <td>{day.created_at}</td>
               <td>
-                <Button variant="primary">Primary</Button>
+                {
+                  setFeeling(day.feeling)
+                }
               </td>
               <td>{day.because}</td>
               <td>{day.behaviors}</td>
