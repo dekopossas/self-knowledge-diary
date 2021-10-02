@@ -57,7 +57,7 @@ function Days() {
 
       <h1>Diário</h1>
       <br />
-      <Table striped bordered hover>
+      <Table striped bordered hover className="text-center">
         <thead>
           <tr>
             <th>Data: </th>
