@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Badge } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import api from '../../services/api';
 
 interface IDay {
@@ -43,7 +43,7 @@ function Days() {
     <div className="container">
       <br />
 
-      <h1>Days Pages</h1>
+      <h1>Diário</h1>
       <br />
       <Table striped bordered hover>
         <thead>
@@ -61,9 +61,7 @@ function Days() {
             <tr key={day.id}>
               <td>{day.created_at}</td>
               <td>
-                <div>
-                  <Badge variant="primary" color="primary">Primary</Badge>
-                </div>
+                <Button variant="primary">Primary</Button>
               </td>
               <td>{day.because}</td>
               <td>{day.behaviors}</td>
