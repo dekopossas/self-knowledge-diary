@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Style
-import { Table, Button } from 'react-bootstrap';
+import { Table, Button, Button } from 'react-bootstrap';
 
 // API
 import api from '../../services/api';
@@ -66,8 +66,10 @@ function Days() {
   return (
     <div className="container">
       <br />
-
-      <h1>Diário</h1>
+      <div className="day-header">
+        <h1>Diário</h1>
+        <Button variant="dark">Nova Observação</Button>
+      </div>
       <br />
       <Table striped bordered hover className="text-center">
         <thead>
