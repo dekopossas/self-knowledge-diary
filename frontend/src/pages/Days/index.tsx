@@ -1,6 +1,14 @@
+// Package
 import React, { useState, useEffect } from 'react';
+
+// Style
 import { Table, Button } from 'react-bootstrap';
+
+// API
 import api from '../../services/api';
+
+// Lib
+import moment from 'moment';
 
 interface IDay {
   id: number;
@@ -24,7 +32,7 @@ function Days() {
   async function loadDays() {
     const response = await api.get('/days');
     setDays(response.data);
-  }
+  };
 
   const setFeeling = (number: number) => {
     if (number === 1) {
@@ -42,6 +50,10 @@ function Days() {
     if (number === 5) {
       return <Button variant="primary">Tristeza</Button>;
     }
+  };
+
+  const formateDate = (date:Date) => {
+    return moment(date).format("DD/MM/YYYY");
   };
 
   // ----------------------------------------------------------------
@@ -71,7 +83,7 @@ function Days() {
         <tbody>
           {days.map((day) => (
             <tr key={day.id}>
-              <td>{day.created_at}</td>
+              <td>{formateDate(day.created_at)}</td>
               <td>{setFeeling(day.feeling)}</td>
               <td>{day.because}</td>
               <td>{day.behaviors}</td>
