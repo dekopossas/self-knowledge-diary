@@ -1,14 +1,15 @@
 // Package
 import React, { useState, useEffect } from 'react';
 
-// Style
-import { Table, Button } from 'react-bootstrap';
-
 // API
 import api from '../../services/api';
 
 // Lib
+
 import moment from 'moment';
+// Style
+import { Table, Button } from 'react-bootstrap';
+import styles from './style.module.scss';
 
 interface IDay {
   id: number;
@@ -66,9 +67,9 @@ function Days() {
   return (
     <div className="container">
       <br />
-      <div className="day-header">
+      <div className={styles.day_header}>
         <h1>Diário</h1>
-        <Button variant="dark">Nova Observação</Button>
+        <Button variant="dark" size="sm">Nova Observação</Button>
       </div>
       <br />
       <Table striped bordered hover className="text-center">
