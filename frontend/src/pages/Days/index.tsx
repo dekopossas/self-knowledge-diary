@@ -77,7 +77,7 @@ function Days() {
             <th>Gatilho: </th>
             <th>Reação: </th>
             <th>Melhorias: </th>
-            <th>Ações: </th>
+            <th>Editar: </th>
           </tr>
         </thead>
         <tbody>
@@ -89,7 +89,7 @@ function Days() {
               <td>{day.behaviors}</td>
               <td>{day.be_better}</td>
               <td>
-                <button>edit</button>
+                <Button variant="dark">editar</Button>
               </td>
             </tr>
           ))}
