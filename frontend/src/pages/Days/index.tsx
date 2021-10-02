@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Style
-import { Table, Button, Button } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 
 // API
 import api from '../../services/api';
