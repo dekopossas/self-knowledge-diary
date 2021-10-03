@@ -69,7 +69,7 @@ function FormDay() {
             <Form.Control type="text" />
           </Form.Group>
           <Button variant="dark" type="submit">
-            Submit
+            Salvar Obrservação
           </Button>
         </Form>
       </div>
