@@ -45,22 +45,21 @@ function FormDay() {
       <br />
       <div className="container">
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicRadio">
-            <Form.Check value={1} inline name="radio" type="radio" label="Alegria" />
-            <Form.Check value={2} inline name="radio" type="radio" label="Raiva" />
-            <Form.Check value={3} inline name="radio" type="radio" label="Medo" />
-            <Form.Check value={4} inline name="radio" type="radio" label="Nojo" />
-            <Form.Check value={5} inline name="radio" type="radio" label="Tristeza" />
+          <Form.Group className="mb-3">
+            <Form.Label>Sentimento:</Form.Label>
+            <br />
+            <Form.Check value={1} inline name="feeling" type="radio" label="Alegria" />
+            <Form.Check value={2} inline name="feeling" type="radio" label="Raiva" />
+            <Form.Check value={3} inline name="feeling" type="radio" label="Medo" />
+            <Form.Check value={4} inline name="feeling" type="radio" label="Nojo" />
+            <Form.Check value={5} inline name="feeling" type="radio" label="Tristeza" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Sentimento</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
