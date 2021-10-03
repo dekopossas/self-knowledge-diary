@@ -39,7 +39,7 @@ function FormDay() {
     <div className="container">
       <br />
       <div className={styles.day_header}>
-        <h1>Nova Obrservação</h1>
+        <h2>Nova Obrservação</h2>
         <Button variant="dark" size="sm">Voltar</Button>
       </div>
       <br />
