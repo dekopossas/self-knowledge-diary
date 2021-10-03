@@ -45,6 +45,13 @@ function FormDay() {
       <br />
       <div className="container">
         <Form>
+          <Form.Group className="mb-3" controlId="formBasicRadio">
+            <Form.Check value={1} inline name="radio" type="radio" label="Alegria" />
+            <Form.Check value={2} inline name="radio" type="radio" label="Raiva" />
+            <Form.Check value={3} inline name="radio" type="radio" label="Medo" />
+            <Form.Check value={4} inline name="radio" type="radio" label="Nojo" />
+            <Form.Check value={5} inline name="radio" type="radio" label="Tristeza" />
+          </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
@@ -57,9 +64,7 @@ function FormDay() {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
+
           <Button variant="primary" type="submit">
             Submit
           </Button>
