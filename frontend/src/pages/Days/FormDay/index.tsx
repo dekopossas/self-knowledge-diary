@@ -68,7 +68,7 @@ function FormDay() {
             <Form.Label>Como poderia ter reagido:</Form.Label>
             <Form.Control type="text" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="dark" type="submit">
             Submit
           </Button>
         </Form>
