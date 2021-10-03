@@ -11,13 +11,10 @@ import { Button, Form } from 'react-bootstrap';
 import styles from './style.module.scss';
 
 interface IDay {
-  id: number;
   feeling: number;
   because: string;
   behaviors: string;
   be_better: string;
-  created_at: Date;
-  updated_at: Date;
 }
 
 function FormDay() {
