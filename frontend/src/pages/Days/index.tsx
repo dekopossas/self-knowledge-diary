@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
 // Lib
-
 import moment from 'moment';
+
 // Style
 import { Table, Button } from 'react-bootstrap';
 import styles from './style.module.scss';
