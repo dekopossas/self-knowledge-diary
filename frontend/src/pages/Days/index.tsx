@@ -1,5 +1,6 @@
 // Package
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 // API
 import api from '../../services/api';
@@ -28,6 +29,11 @@ function Days() {
   const [days, setDays] = useState<IDay[]>([]);
 
   // ----------------------------------------------------------------
+  // Hooks
+  // ----------------------------------------------------------------
+  const history = useHistory();
+
+  // ----------------------------------------------------------------
   // Functions
   // ----------------------------------------------------------------
   async function loadDays() {
@@ -53,6 +59,10 @@ function Days() {
     }
   };
 
+  const newDay = () => {
+    history.push('/calendario/nova-observacao')
+  }
+
   const formateDate = (date:Date) => {
     return moment(date).format("DD/MM/YYYY");
   };
@@ -69,7 +79,7 @@ function Days() {
       <br />
       <div className={styles.day_header}>
         <h1>Diário</h1>
-        <Button variant="dark" size="sm">Nova Observação</Button>
+        <Button variant="dark" size="sm" onClick={newDay}>Nova Observação</Button>
       </div>
       <br />
       <Table striped bordered hover className="text-center">
